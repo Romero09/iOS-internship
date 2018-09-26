@@ -24,11 +24,11 @@ public class ForecastModel: FetchForecastDelegate{
     }
     
     
-    func forecastFetched(forecast: Forecast) {
+    func forecastFetched(forecast: Forecast, headline: ForecastHeadline) {
         guard let delegate = self.delegate else {
             return
         }
-        delegate.getForecast(forecast: forecast)
+        delegate.getForecast(forecast: forecast, headline: headline)
         print("Forecast is \(forecast)")
     }
 
@@ -38,9 +38,23 @@ public class ForecastModel: FetchForecastDelegate{
 struct Forecast: JSONDecodable {
     public let maxTemp: Int
     public let minTemp: Int
+    public let unit: String
+    
     
     public init(json value: JSON) throws {
         minTemp = try value.getInt(at: "Temperature", "Minimum", "Value")
         maxTemp = try value.getInt(at: "Temperature", "Maximum", "Value")
+        unit = try value.getString(at: "Temperature", "Maximum", "Unit")
+    }
+}
+
+struct ForecastHeadline: JSONDecodable {
+    public let text: String
+    public let category: String
+    
+    
+    public init(json value: JSON) throws {
+        category = try value.getString(at: "Category")
+        text = try value.getString(at: "Text")
     }
 }

@@ -39,14 +39,16 @@ class ForecastTransport{
             } else {
                 do {
                     let json = try JSON(data: data!)
-                    //print(json)
-                    let cityArray = try json.getArray(at: "DailyForecasts").map(Forecast.init)
+                    print(json)
+                    let forecastHeadline = try json.decode(at: "Headline", type: ForecastHeadline.self)
+                    print(forecastHeadline)
+                    let forecast = try json.getArray(at: "DailyForecasts").map(Forecast.init)
                     guard let delegate = self.delegate else {
                         return
                     }
-                    delegate.forecastFetched(forecast: cityArray[0])
+                    delegate.forecastFetched(forecast: forecast[0], headline: forecastHeadline)
                    
-                    //print(cityArray)
+                    print(forecast)
                 }catch{
                     print("error parsing")
                 }

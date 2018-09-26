@@ -9,12 +9,12 @@
 import Foundation
 
 protocol FetchForecastDelegate{
-    func forecastFetched(forecast: Forecast)
+    func forecastFetched(forecast: Forecast, headline: ForecastHeadline)
     
 }
 
 protocol GetForecastDelegate{
-    func getForecast(forecast: Forecast)
+    func getForecast(forecast: Forecast, headline: ForecastHeadline)
 }
 
 

@@ -14,6 +14,10 @@ class ForecastViewController: UIViewController, GetForecastDelegate {
     @IBOutlet weak var titleBar: UINavigationItem!
     @IBOutlet weak var maxTemp: UILabel!
     @IBOutlet weak var minTemp: UILabel!
+    @IBOutlet weak var maxTempUnit: UILabel!
+    @IBOutlet weak var minTempUnit: UILabel!
+    @IBOutlet weak var text: UILabel!
+    @IBOutlet weak var condition: UILabel!
     
     let forecastModel = ForecastModel()
     
@@ -36,10 +40,14 @@ class ForecastViewController: UIViewController, GetForecastDelegate {
         
     }
     
-    func getForecast(forecast: Forecast) {
+    func getForecast(forecast: Forecast, headline: ForecastHeadline) {
         DispatchQueue.main.async(execute:{() -> Void in
             self.maxTemp.text = String(forecast.maxTemp)
             self.minTemp.text = String(forecast.minTemp)
+            self.maxTempUnit.text = forecast.unit
+            self.minTempUnit.text = forecast.unit
+            self.text.text = headline.text
+            self.condition.text = headline.category
         })
         
     }
