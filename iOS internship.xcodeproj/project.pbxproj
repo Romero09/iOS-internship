@@ -10,12 +10,15 @@
 		415BBC37215A5565009FA99C /* Freddy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41DB2DD3215A5551003F9E7A /* Freddy.framework */; };
 		415BBC39215B59C5009FA99C /* CityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415BBC38215B59C5009FA99C /* CityModel.swift */; };
 		415BBC3B215B5A4F009FA99C /* CityTransport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415BBC3A215B5A4F009FA99C /* CityTransport.swift */; };
+		415BBC41215B804A009FA99C /* ForecastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415BBC40215B804A009FA99C /* ForecastViewController.swift */; };
+		415BBC43215B89DA009FA99C /* ForecastModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415BBC42215B89DA009FA99C /* ForecastModel.swift */; };
+		415BBC45215B89EC009FA99C /* ForecastTransport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415BBC44215B89EC009FA99C /* ForecastTransport.swift */; };
+		415BBC47215BAA1E009FA99C /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415BBC46215BAA1E009FA99C /* Protocols.swift */; };
 		41DB2D5F215A242C003F9E7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DB2D5E215A242C003F9E7A /* AppDelegate.swift */; };
 		41DB2D61215A242C003F9E7A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DB2D60215A242C003F9E7A /* ViewController.swift */; };
 		41DB2D64215A242C003F9E7A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41DB2D62215A242C003F9E7A /* Main.storyboard */; };
 		41DB2D67215A242C003F9E7A /* iOS_internship.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 41DB2D65215A242C003F9E7A /* iOS_internship.xcdatamodeld */; };
 		41DB2D69215A242E003F9E7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41DB2D68215A242E003F9E7A /* Assets.xcassets */; };
-		41DB2D6C215A242E003F9E7A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41DB2D6A215A242E003F9E7A /* LaunchScreen.storyboard */; };
 		41DB2D77215A242E003F9E7A /* iOS_internshipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DB2D76215A242E003F9E7A /* iOS_internshipTests.swift */; };
 		41DB2D82215A242E003F9E7A /* iOS_internshipUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DB2D81215A242E003F9E7A /* iOS_internshipUITests.swift */; };
 /* End PBXBuildFile section */
@@ -40,13 +43,16 @@
 /* Begin PBXFileReference section */
 		415BBC38215B59C5009FA99C /* CityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityModel.swift; sourceTree = "<group>"; };
 		415BBC3A215B5A4F009FA99C /* CityTransport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityTransport.swift; sourceTree = "<group>"; };
+		415BBC40215B804A009FA99C /* ForecastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastViewController.swift; sourceTree = "<group>"; };
+		415BBC42215B89DA009FA99C /* ForecastModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastModel.swift; sourceTree = "<group>"; };
+		415BBC44215B89EC009FA99C /* ForecastTransport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastTransport.swift; sourceTree = "<group>"; };
+		415BBC46215BAA1E009FA99C /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		41DB2D5B215A242C003F9E7A /* iOS internship.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS internship.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		41DB2D5E215A242C003F9E7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		41DB2D60215A242C003F9E7A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		41DB2D63215A242C003F9E7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		41DB2D66215A242C003F9E7A /* iOS_internship.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iOS_internship.xcdatamodel; sourceTree = "<group>"; };
 		41DB2D68215A242E003F9E7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		41DB2D6B215A242E003F9E7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		41DB2D6D215A242E003F9E7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		41DB2D72215A242E003F9E7A /* iOS internshipTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS internshipTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		41DB2D76215A242E003F9E7A /* iOS_internshipTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_internshipTests.swift; sourceTree = "<group>"; };
@@ -112,11 +118,14 @@
 				41DB2D60215A242C003F9E7A /* ViewController.swift */,
 				41DB2D62215A242C003F9E7A /* Main.storyboard */,
 				41DB2D68215A242E003F9E7A /* Assets.xcassets */,
-				41DB2D6A215A242E003F9E7A /* LaunchScreen.storyboard */,
 				41DB2D6D215A242E003F9E7A /* Info.plist */,
 				41DB2D65215A242C003F9E7A /* iOS_internship.xcdatamodeld */,
 				415BBC38215B59C5009FA99C /* CityModel.swift */,
 				415BBC3A215B5A4F009FA99C /* CityTransport.swift */,
+				415BBC40215B804A009FA99C /* ForecastViewController.swift */,
+				415BBC42215B89DA009FA99C /* ForecastModel.swift */,
+				415BBC44215B89EC009FA99C /* ForecastTransport.swift */,
+				415BBC46215BAA1E009FA99C /* Protocols.swift */,
 			);
 			path = "iOS internship";
 			sourceTree = "<group>";
@@ -253,7 +262,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				41DB2D6C215A242E003F9E7A /* LaunchScreen.storyboard in Resources */,
 				41DB2D69215A242E003F9E7A /* Assets.xcassets in Resources */,
 				41DB2D64215A242C003F9E7A /* Main.storyboard in Resources */,
 			);
@@ -304,8 +312,12 @@
 				415BBC3B215B5A4F009FA99C /* CityTransport.swift in Sources */,
 				415BBC39215B59C5009FA99C /* CityModel.swift in Sources */,
 				41DB2D61215A242C003F9E7A /* ViewController.swift in Sources */,
+				415BBC47215BAA1E009FA99C /* Protocols.swift in Sources */,
 				41DB2D5F215A242C003F9E7A /* AppDelegate.swift in Sources */,
 				41DB2D67215A242C003F9E7A /* iOS_internship.xcdatamodeld in Sources */,
+				415BBC41215B804A009FA99C /* ForecastViewController.swift in Sources */,
+				415BBC45215B89EC009FA99C /* ForecastTransport.swift in Sources */,
+				415BBC43215B89DA009FA99C /* ForecastModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,14 +359,6 @@
 				41DB2D63215A242C003F9E7A /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		41DB2D6A215A242E003F9E7A /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				41DB2D6B215A242E003F9E7A /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
