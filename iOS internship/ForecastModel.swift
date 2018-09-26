@@ -9,9 +9,14 @@
 import Foundation
 import Freddy
 
+protocol FetchForecastDelegate{
+    func forecastFetched(forecast: Forecast, headline: ForecastHeadline)
+    
+}
+
 public class ForecastModel: FetchForecastDelegate{
     
-    var delegate: GetForecastDelegate?
+    var delegate: UpdateForecastDelegate?
 
     let forecastTransport = ForecastTransport()
     
@@ -28,7 +33,7 @@ public class ForecastModel: FetchForecastDelegate{
         guard let delegate = self.delegate else {
             return
         }
-        delegate.getForecast(forecast: forecast, headline: headline)
+        delegate.update(forecast: forecast, headline: headline)
         print("Forecast is \(forecast)")
     }
 

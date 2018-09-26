@@ -14,10 +14,10 @@ class ForecastTransport{
     
     var delegate: FetchForecastDelegate?
     
-    let host = "http://dataservice.accuweather.com"
-    let queryType = "/forecasts/v1/daily/1day/"
-    let apiKey = "apikey=hjuVrFcGICAo5gPG29XzOi2KENaQc7Ld"
-    let metric = "&metric=true"
+    private let host = "http://dataservice.accuweather.com"
+    private let queryType = "/forecasts/v1/daily/1day/"
+    private let apiKey = "apikey=IMgqorDz5IuGWo9ncYmyTxsRnX4SGxgS"
+    private let metric = "&metric=true"
     
     //API - apikey=09IMgqorDz5IuGWo9ncYmyTxsRnX4SGxgS
     //API - apikey=hjuVrFcGICAo5gPG29XzOi2KENaQc7Ld

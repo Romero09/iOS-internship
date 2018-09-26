@@ -43,13 +43,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = UITableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: "Cell")
+        let cityNameCell = UITableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: "Cell")
         
         let cellText = "\(cityModel.cityArray[indexPath.row].cityName) \(cityModel.cityArray[indexPath.row].countryName) \(cityModel.cityArray[indexPath.row].administrativeAriaID)"
         
-        cell.textLabel?.text = cellText
+        cityNameCell.textLabel?.text = cellText
         
-        return cell
+        return cityNameCell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -80,11 +80,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         print("preparingSeg")
-        if segue.identifier == "forecastSegue" {
-            if let destinationVC = segue.destination as? ForecastViewController {
+        if segue.identifier == "forecastSegue", let destinationVC = segue.destination as? ForecastViewController {
                 destinationVC.location = location
                 destinationVC.city = city
-            }
         }
         
     }

@@ -11,11 +11,11 @@ import Freddy
 
 public class CityTransport{
     
-    let host = "http://dataservice.accuweather.com"
-    let queryType = "/locations/v1/cities/autocomplete?"
-    let apiKey = "apikey=hjuVrFcGICAo5gPG29XzOi2KENaQc7Ld"
+    private let host = "http://dataservice.accuweather.com"
+    private let queryType = "/locations/v1/cities/autocomplete?"
+    private let apiKey = "apikey=IMgqorDz5IuGWo9ncYmyTxsRnX4SGxgS"
     
-    //API - apikey=09IMgqorDz5IuGWo9ncYmyTxsRnX4SGxgS
+    //API - apikey=IMgqorDz5IuGWo9ncYmyTxsRnX4SGxgS
     //API - apikey=hjuVrFcGICAo5gPG29XzOi2KENaQc7Ld
     // "http://dataservice.accuweather.com/locations/v1/cities/search?apikey=%09IMgqorDz5IuGWo9ncYmyTxsRnX4SGxgS&q=riga"
     

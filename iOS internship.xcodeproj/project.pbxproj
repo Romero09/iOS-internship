@@ -13,7 +13,6 @@
 		415BBC41215B804A009FA99C /* ForecastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415BBC40215B804A009FA99C /* ForecastViewController.swift */; };
 		415BBC43215B89DA009FA99C /* ForecastModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415BBC42215B89DA009FA99C /* ForecastModel.swift */; };
 		415BBC45215B89EC009FA99C /* ForecastTransport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415BBC44215B89EC009FA99C /* ForecastTransport.swift */; };
-		415BBC47215BAA1E009FA99C /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415BBC46215BAA1E009FA99C /* Protocols.swift */; };
 		41DB2D5F215A242C003F9E7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DB2D5E215A242C003F9E7A /* AppDelegate.swift */; };
 		41DB2D61215A242C003F9E7A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DB2D60215A242C003F9E7A /* ViewController.swift */; };
 		41DB2D64215A242C003F9E7A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41DB2D62215A242C003F9E7A /* Main.storyboard */; };
@@ -46,7 +45,6 @@
 		415BBC40215B804A009FA99C /* ForecastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastViewController.swift; sourceTree = "<group>"; };
 		415BBC42215B89DA009FA99C /* ForecastModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastModel.swift; sourceTree = "<group>"; };
 		415BBC44215B89EC009FA99C /* ForecastTransport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastTransport.swift; sourceTree = "<group>"; };
-		415BBC46215BAA1E009FA99C /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		41DB2D5B215A242C003F9E7A /* iOS internship.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS internship.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		41DB2D5E215A242C003F9E7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		41DB2D60215A242C003F9E7A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -125,7 +123,6 @@
 				415BBC40215B804A009FA99C /* ForecastViewController.swift */,
 				415BBC42215B89DA009FA99C /* ForecastModel.swift */,
 				415BBC44215B89EC009FA99C /* ForecastTransport.swift */,
-				415BBC46215BAA1E009FA99C /* Protocols.swift */,
 			);
 			path = "iOS internship";
 			sourceTree = "<group>";
@@ -312,7 +309,6 @@
 				415BBC3B215B5A4F009FA99C /* CityTransport.swift in Sources */,
 				415BBC39215B59C5009FA99C /* CityModel.swift in Sources */,
 				41DB2D61215A242C003F9E7A /* ViewController.swift in Sources */,
-				415BBC47215BAA1E009FA99C /* Protocols.swift in Sources */,
 				41DB2D5F215A242C003F9E7A /* AppDelegate.swift in Sources */,
 				41DB2D67215A242C003F9E7A /* iOS_internship.xcdatamodeld in Sources */,
 				415BBC41215B804A009FA99C /* ForecastViewController.swift in Sources */,

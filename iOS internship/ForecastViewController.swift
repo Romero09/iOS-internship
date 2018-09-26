@@ -8,7 +8,11 @@
 
 import UIKit
 
-class ForecastViewController: UIViewController, GetForecastDelegate {
+protocol UpdateForecastDelegate{
+    func update(forecast: Forecast, headline: ForecastHeadline)
+}
+
+class ForecastViewController: UIViewController, UpdateForecastDelegate {
     
     
     @IBOutlet weak var titleBar: UINavigationItem!
@@ -19,14 +23,14 @@ class ForecastViewController: UIViewController, GetForecastDelegate {
     @IBOutlet weak var text: UILabel!
     @IBOutlet weak var condition: UILabel!
     
-    let forecastModel = ForecastModel()
+    private let forecastModel = ForecastModel()
     
     var city = ""
     var location = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -40,7 +44,7 @@ class ForecastViewController: UIViewController, GetForecastDelegate {
         
     }
     
-    func getForecast(forecast: Forecast, headline: ForecastHeadline) {
+    func update(forecast: Forecast, headline: ForecastHeadline) {
         DispatchQueue.main.async(execute:{() -> Void in
             self.maxTemp.text = String(forecast.maxTemp)
             self.minTemp.text = String(forecast.minTemp)
@@ -51,16 +55,6 @@ class ForecastViewController: UIViewController, GetForecastDelegate {
         })
         
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
