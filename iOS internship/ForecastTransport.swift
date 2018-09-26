@@ -31,7 +31,6 @@ class ForecastTransport{
             print("value was nil")
             return
         }
-        print(fullQuerryURL)
         
         let fetchByLocation = URLSession.shared.dataTask(with: fullQuerryURL) { (data, response, error) in
             if error != nil {
@@ -39,16 +38,13 @@ class ForecastTransport{
             } else {
                 do {
                     let json = try JSON(data: data!)
-                    print(json)
                     let forecastHeadline = try json.decode(at: "Headline", type: ForecastHeadline.self)
-                    print(forecastHeadline)
                     let forecast = try json.getArray(at: "DailyForecasts").map(Forecast.init)
                     guard let delegate = self.delegate else {
                         return
                     }
                     delegate.forecastFetched(forecast: forecast[0], headline: forecastHeadline)
                    
-                    print(forecast)
                 }catch{
                     print("error parsing")
                 }

@@ -19,7 +19,6 @@ public class CityModel{
     func fetchCity(city: String, completion: @escaping (_ result: Bool) ->()){
         cityTransport.fetchCity(fetchCity: city){ (cities) in
             self.cityArray = cities
-            print(cities)
             completion(true)
         }
     }

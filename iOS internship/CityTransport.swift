@@ -27,7 +27,6 @@ public class CityTransport{
             print("value was nil")
             return
         }
-        print(fullQuerryURL)
         
         let fetchByCity = URLSession.shared.dataTask(with: fullQuerryURL) { (data, response, error) in
             if error != nil {

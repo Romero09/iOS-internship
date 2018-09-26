@@ -34,7 +34,6 @@ public class ForecastModel: FetchForecastDelegate{
             return
         }
         delegate.update(forecast: forecast, headline: headline)
-        print("Forecast is \(forecast)")
     }
 
 }

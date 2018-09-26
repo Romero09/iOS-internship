@@ -36,7 +36,6 @@ class ForecastViewController: UIViewController, UpdateForecastDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         titleBar.title = city
-        print(location)
 
         forecastModel.delegate = self
         forecastModel.fetchForecast(fetchLocation: location)

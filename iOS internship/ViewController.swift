@@ -43,7 +43,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cityNameCell = UITableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: "Cell")
+        let cityNameCell = UITableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: "CityNameCell")
         
         let cellText = "\(cityModel.cityArray[indexPath.row].cityName) \(cityModel.cityArray[indexPath.row].countryName) \(cityModel.cityArray[indexPath.row].administrativeAriaID)"
         
@@ -53,20 +53,18 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cell = tableView.cellForRow(at: indexPath as IndexPath)
+        let cityNameCell = tableView.cellForRow(at: indexPath as IndexPath)
         tableView.deselectRow(at: indexPath as IndexPath, animated: true)
         
         location = cityModel.cityArray[indexPath.row].locationKey
         city = cityModel.cityArray[indexPath.row].cityName
         
-        print(location)
-        performSegue(withIdentifier: "forecastSegue", sender: cell)
+        performSegue(withIdentifier: "forecastSegue", sender: cityNameCell)
     }
     
     func textFieldShouldReturn(_ textField: UITextField)->Bool{
         if let tempCityName = cityText.text{
             cityModel.fetchCity(city: tempCityName){ (result) -> () in
-                print(result)
                 
                 DispatchQueue.main.async(execute:{() -> Void in
                     self.cityTableView.reloadData()
@@ -79,7 +77,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        print("preparingSeg")
         if segue.identifier == "forecastSegue", let destinationVC = segue.destination as? ForecastViewController {
                 destinationVC.location = location
                 destinationVC.city = city
