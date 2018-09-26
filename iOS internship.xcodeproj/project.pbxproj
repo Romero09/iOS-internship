@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		415BBC37215A5565009FA99C /* Freddy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41DB2DD3215A5551003F9E7A /* Freddy.framework */; };
+		415BBC39215B59C5009FA99C /* CityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415BBC38215B59C5009FA99C /* CityModel.swift */; };
+		415BBC3B215B5A4F009FA99C /* CityTransport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415BBC3A215B5A4F009FA99C /* CityTransport.swift */; };
 		41DB2D5F215A242C003F9E7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DB2D5E215A242C003F9E7A /* AppDelegate.swift */; };
 		41DB2D61215A242C003F9E7A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DB2D60215A242C003F9E7A /* ViewController.swift */; };
 		41DB2D64215A242C003F9E7A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41DB2D62215A242C003F9E7A /* Main.storyboard */; };
@@ -35,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		415BBC38215B59C5009FA99C /* CityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityModel.swift; sourceTree = "<group>"; };
+		415BBC3A215B5A4F009FA99C /* CityTransport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityTransport.swift; sourceTree = "<group>"; };
 		41DB2D5B215A242C003F9E7A /* iOS internship.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS internship.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		41DB2D5E215A242C003F9E7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		41DB2D60215A242C003F9E7A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +54,8 @@
 		41DB2D7D215A242E003F9E7A /* iOS internshipUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS internshipUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		41DB2D81215A242E003F9E7A /* iOS_internshipUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_internshipUITests.swift; sourceTree = "<group>"; };
 		41DB2D83215A242E003F9E7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		41DB2DD0215A5157003F9E7A /* Freddy.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Freddy.framework; path = ../Carthage/Carthage/Build/iOS/Freddy.framework; sourceTree = "<group>"; };
+		41DB2DD3215A5551003F9E7A /* Freddy.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Freddy.framework; path = Carthage/Build/iOS/Freddy.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				415BBC37215A5565009FA99C /* Freddy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +91,7 @@
 				41DB2D75215A242E003F9E7A /* iOS internshipTests */,
 				41DB2D80215A242E003F9E7A /* iOS internshipUITests */,
 				41DB2D5C215A242C003F9E7A /* Products */,
+				41DB2DCF215A5157003F9E7A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,6 +115,8 @@
 				41DB2D6A215A242E003F9E7A /* LaunchScreen.storyboard */,
 				41DB2D6D215A242E003F9E7A /* Info.plist */,
 				41DB2D65215A242C003F9E7A /* iOS_internship.xcdatamodeld */,
+				415BBC38215B59C5009FA99C /* CityModel.swift */,
+				415BBC3A215B5A4F009FA99C /* CityTransport.swift */,
 			);
 			path = "iOS internship";
 			sourceTree = "<group>";
@@ -128,6 +139,15 @@
 			path = "iOS internshipUITests";
 			sourceTree = "<group>";
 		};
+		41DB2DCF215A5157003F9E7A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				41DB2DD3215A5551003F9E7A /* Freddy.framework */,
+				41DB2DD0215A5157003F9E7A /* Freddy.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,6 +158,7 @@
 				41DB2D57215A242C003F9E7A /* Sources */,
 				41DB2D58215A242C003F9E7A /* Frameworks */,
 				41DB2D59215A242C003F9E7A /* Resources */,
+				41DB2DD2215A516E003F9E7A /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -254,11 +275,34 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		41DB2DD2215A516E003F9E7A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Freddy.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		41DB2D57215A242C003F9E7A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				415BBC3B215B5A4F009FA99C /* CityTransport.swift in Sources */,
+				415BBC39215B59C5009FA99C /* CityModel.swift in Sources */,
 				41DB2D61215A242C003F9E7A /* ViewController.swift in Sources */,
 				41DB2D5F215A242C003F9E7A /* AppDelegate.swift in Sources */,
 				41DB2D67215A242C003F9E7A /* iOS_internship.xcdatamodeld in Sources */,
@@ -437,6 +481,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "iOS internship/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -454,6 +502,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "iOS internship/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
