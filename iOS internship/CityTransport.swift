@@ -29,6 +29,7 @@ public class CityTransport{
         }
         
         let fetchByCity = URLSession.shared.dataTask(with: fullQuerryURL) { (data, response, error) in
+            
             if error != nil {
                 print(error!)
             } else {
