@@ -18,9 +18,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     var cityName = ""
     
-    
-    
     let cityModel: CityModel = CityModel()
+    
+    var location = ""
+    var city = ""
     
     
     override func viewDidLoad() {
@@ -29,12 +30,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         cityTableView.dataSource = self
         cityText.delegate = self
         
-        //        model.loadNewData(dismiss(animated: <#T##Bool#>, completion: {
-        //            DispatchAsync {
-        //
-        //                cityTableView.reloadData()
-        //            }
-        //        }))
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -45,29 +40,31 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
     }
     
-    //    loadedData(compelte: () -> () ) {
-    //
-    //    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = UITableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: nil)
+        let cityNameCell = UITableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: "CityNameCell")
         
         let cellText = "\(cityModel.cityArray[indexPath.row].cityName) \(cityModel.cityArray[indexPath.row].countryName) \(cityModel.cityArray[indexPath.row].administrativeAriaID)"
         
-        cell.textLabel?.text = cellText
+        cityNameCell.textLabel?.text = cellText
         
-        return cell
+        return cityNameCell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cityNameCell = tableView.cellForRow(at: indexPath as IndexPath)
+        tableView.deselectRow(at: indexPath as IndexPath, animated: true)
         
+        location = cityModel.cityArray[indexPath.row].locationKey
+        city = cityModel.cityArray[indexPath.row].cityName
+        
+        performSegue(withIdentifier: "forecastSegue", sender: cityNameCell)
     }
     
     func textFieldShouldReturn(_ textField: UITextField)->Bool{
         if let tempCityName = cityText.text{
             cityModel.fetchCity(city: tempCityName){ (result) -> () in
-                print(result)
                 
                 DispatchQueue.main.async(execute:{() -> Void in
                     self.cityTableView.reloadData()
@@ -79,6 +76,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "forecastSegue", let destinationVC = segue.destination as? ForecastViewController {
+                destinationVC.location = location
+                destinationVC.city = city
+        }
+        
+    }
     
 }
 
