@@ -11,25 +11,28 @@ import Freddy
 
 public class CityTransport{
     
-    let host = "http://dataservice.accuweather.com"
-    let queryType = "/locations/v1/cities/autocomplete?"
-    let apiKey = "apikey=hjuVrFcGICAo5gPG29XzOi2KENaQc7Ld"
+    private let host = "http://dataservice.accuweather.com"
+    private let queryType = "/locations/v1/cities/autocomplete?"
+    private let apiKey = "apikey=IMgqorDz5IuGWo9ncYmyTxsRnX4SGxgS"
     
-    //API - apikey=09IMgqorDz5IuGWo9ncYmyTxsRnX4SGxgS
+    //API - apikey=IMgqorDz5IuGWo9ncYmyTxsRnX4SGxgS
     //API - apikey=hjuVrFcGICAo5gPG29XzOi2KENaQc7Ld
     // "http://dataservice.accuweather.com/locations/v1/cities/search?apikey=%09IMgqorDz5IuGWo9ncYmyTxsRnX4SGxgS&q=riga"
     
     func fetchCity(fetchCity cityName: String, completion: @escaping (_ cities: [City]) -> ()) {
-        let querry = "&q=\(cityName)"
         
-        let fullQuerry = host+queryType+apiKey+querry
-        guard let fullQuerryURL: URL = URL(string: fullQuerry) else {
+
+        let queryWithSpace = "&q=\(cityName)"
+        let query = queryWithSpace.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
+        
+        let fullQuery = host+queryType+apiKey+query
+        guard let fullQuerryURL: URL = URL(string: fullQuery) else {
             print("value was nil")
             return
         }
-        print(fullQuerryURL)
         
         let fetchByCity = URLSession.shared.dataTask(with: fullQuerryURL) { (data, response, error) in
+            
             if error != nil {
                 print(error!)
             } else {
