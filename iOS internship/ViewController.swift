@@ -16,6 +16,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     @IBOutlet weak var cityTableView: UITableView!
     
+    @IBOutlet weak var cityTableHightConstraint: NSLayoutConstraint!
+    
     var currentCityName = ""
     
     let cityModel: CityModel = CityModel()
@@ -71,6 +73,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                     
                     DispatchQueue.main.async(execute:{() -> Void in
                         self.cityTableView.reloadData()
+                        self.cityTableHightConstraint.constant = self.cityTableView.contentSize.height
                     })
                 }
             }
@@ -111,6 +114,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                 
                 DispatchQueue.main.async(execute:{() -> Void in
                     self.cityTableView.reloadData()
+                    self.cityTableHightConstraint.constant = self.cityTableView.contentSize.height
                 })
             }
             } else {
@@ -118,6 +122,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             }
         }
     }
+
     
 }
 

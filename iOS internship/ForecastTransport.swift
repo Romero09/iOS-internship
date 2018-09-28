@@ -24,10 +24,10 @@ class ForecastTransport{
     // "http://dataservice.accuweather.com/locations/v1/cities/search?apikey=%09IMgqorDz5IuGWo9ncYmyTxsRnX4SGxgS&q=riga"
     
     func fetchForecast(fetchLocation location: String) {
-        let querry = "\(location)?"
+        let query = "\(location)?"
         
-        let fullQuerry = host+queryType+querry+apiKey+metric
-        guard let fullQuerryURL: URL = URL(string: fullQuerry) else {
+        let fullQuery = host+queryType+query+apiKey+metric
+        guard let fullQuerryURL: URL = URL(string: fullQuery) else {
             print("value was nil")
             return
         }

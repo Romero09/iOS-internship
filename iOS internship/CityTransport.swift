@@ -22,11 +22,11 @@ public class CityTransport{
     func fetchCity(fetchCity cityName: String, completion: @escaping (_ cities: [City]) -> ()) {
         
 
-        let querryWithSpace = "&q=\(cityName)"
-        let querry = querryWithSpace.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
+        let queryWithSpace = "&q=\(cityName)"
+        let query = queryWithSpace.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
         
-        let fullQuerry = host+queryType+apiKey+querry
-        guard let fullQuerryURL: URL = URL(string: fullQuerry) else {
+        let fullQuery = host+queryType+apiKey+query
+        guard let fullQuerryURL: URL = URL(string: fullQuery) else {
             print("value was nil")
             return
         }
