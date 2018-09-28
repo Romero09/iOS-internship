@@ -22,6 +22,8 @@ class ForecastViewController: UIViewController, UpdateForecastDelegate {
     @IBOutlet weak var minTempUnit: UILabel!
     @IBOutlet weak var text: UILabel!
     @IBOutlet weak var condition: UILabel!
+    @IBOutlet weak var conditionLabel: UILabel!
+    
     
     private let forecastModel = ForecastModel()
     
@@ -50,7 +52,13 @@ class ForecastViewController: UIViewController, UpdateForecastDelegate {
             self.maxTempUnit.text = forecast.unit
             self.minTempUnit.text = forecast.unit
             self.text.text = headline.text
+            
+            if headline.category == "" {
+                self.condition.isHidden = true
+                self.conditionLabel.isHidden = true
+            } else {
             self.condition.text = headline.category
+            }
         })
         
     }
