@@ -20,7 +20,10 @@ public class CityTransport{
     // "http://dataservice.accuweather.com/locations/v1/cities/search?apikey=%09IMgqorDz5IuGWo9ncYmyTxsRnX4SGxgS&q=riga"
     
     func fetchCity(fetchCity cityName: String, completion: @escaping (_ cities: [City]) -> ()) {
-        let querry = "&q=\(cityName)"
+        
+
+        let querryWithSpace = "&q=\(cityName)"
+        let querry = querryWithSpace.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
         
         let fullQuerry = host+queryType+apiKey+querry
         guard let fullQuerryURL: URL = URL(string: fullQuerry) else {

@@ -16,7 +16,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     @IBOutlet weak var cityTableView: UITableView!
     
-    var cityName = ""
+    var currentCityName = ""
     
     let cityModel: CityModel = CityModel()
     
@@ -63,12 +63,16 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func textFieldShouldReturn(_ textField: UITextField)->Bool{
-        if let tempCityName = cityText.text{
-            cityModel.fetchCity(city: tempCityName){ (result) -> () in
-                
-                DispatchQueue.main.async(execute:{() -> Void in
-                    self.cityTableView.reloadData()
-                })
+        if let newCityName = textField.text, textField == cityText, textField.text != ""{
+            if(self.currentCityName != newCityName){
+                self.currentCityName = newCityName
+                let trimmedCityName = newCityName.trimmingCharacters(in: .whitespaces)
+                cityModel.fetchCity(city: trimmedCityName){ (result) -> () in
+                    
+                    DispatchQueue.main.async(execute:{() -> Void in
+                        self.cityTableView.reloadData()
+                    })
+                }
             }
         }
         textField.resignFirstResponder()
@@ -82,6 +86,37 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                 destinationVC.city = city
         }
         
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange,
+                   replacementString string: String) -> Bool {
+        NSObject.cancelPreviousPerformRequests(
+            withTarget: self,
+            selector: #selector(getCityNameList),
+            object: textField)
+        self.perform(
+            #selector(getCityNameList),
+            with: textField,
+            afterDelay: 1)
+        return true
+    }
+    
+    @objc func getCityNameList(textField: UITextField) {
+        
+        if let newCityName = textField.text, textField == cityText, textField.text != ""{
+            if(self.currentCityName != newCityName){
+                self.currentCityName = newCityName
+            let trimmedCityName = newCityName.trimmingCharacters(in: .whitespaces)
+            cityModel.fetchCity(city: trimmedCityName){ (result) -> () in
+                
+                DispatchQueue.main.async(execute:{() -> Void in
+                    self.cityTableView.reloadData()
+                })
+            }
+            } else {
+                return
+            }
+        }
     }
     
 }
