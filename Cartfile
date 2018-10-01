@@ -1,0 +1,2 @@
+github "bignerdranch/Freddy" ~> 3.0
+binary "https://dl.google.com/dl/firebase/ios/carthage/FirebaseAnalyticsBinary.json"
