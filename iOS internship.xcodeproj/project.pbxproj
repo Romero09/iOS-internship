@@ -13,7 +13,6 @@
 		415BBC41215B804A009FA99C /* ForecastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415BBC40215B804A009FA99C /* ForecastViewController.swift */; };
 		415BBC43215B89DA009FA99C /* ForecastModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415BBC42215B89DA009FA99C /* ForecastModel.swift */; };
 		415BBC45215B89EC009FA99C /* ForecastTransport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415BBC44215B89EC009FA99C /* ForecastTransport.swift */; };
-		415BBC4E215C1121009FA99C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 415BBC4D215C1121009FA99C /* GoogleService-Info.plist */; };
 		415BBD152162058B009FA99C /* FirebaseCoreDiagnostics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 415BBD0D2162058A009FA99C /* FirebaseCoreDiagnostics.framework */; };
 		415BBD162162058B009FA99C /* GoogleUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 415BBD0E2162058A009FA99C /* GoogleUtilities.framework */; };
 		415BBD172162058B009FA99C /* FirebaseAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 415BBD0F2162058A009FA99C /* FirebaseAnalytics.framework */; };
@@ -22,6 +21,7 @@
 		415BBD1A2162058B009FA99C /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 415BBD122162058B009FA99C /* Firebase.framework */; };
 		415BBD1B2162058B009FA99C /* GoogleAppMeasurement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 415BBD132162058B009FA99C /* GoogleAppMeasurement.framework */; };
 		415BBD1C2162058B009FA99C /* nanopb.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 415BBD142162058B009FA99C /* nanopb.framework */; };
+		415BBD1E21621AB9009FA99C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 415BBD1D21621AB9009FA99C /* GoogleService-Info.plist */; };
 		41DB2D5F215A242C003F9E7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DB2D5E215A242C003F9E7A /* AppDelegate.swift */; };
 		41DB2D61215A242C003F9E7A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DB2D60215A242C003F9E7A /* ViewController.swift */; };
 		41DB2D64215A242C003F9E7A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41DB2D62215A242C003F9E7A /* Main.storyboard */; };
@@ -54,7 +54,6 @@
 		415BBC40215B804A009FA99C /* ForecastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastViewController.swift; sourceTree = "<group>"; };
 		415BBC42215B89DA009FA99C /* ForecastModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastModel.swift; sourceTree = "<group>"; };
 		415BBC44215B89EC009FA99C /* ForecastTransport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastTransport.swift; sourceTree = "<group>"; };
-		415BBC4D215C1121009FA99C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		415BBD0D2162058A009FA99C /* FirebaseCoreDiagnostics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseCoreDiagnostics.framework; path = Carthage/Build/iOS/FirebaseCoreDiagnostics.framework; sourceTree = "<group>"; };
 		415BBD0E2162058A009FA99C /* GoogleUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleUtilities.framework; path = Carthage/Build/iOS/GoogleUtilities.framework; sourceTree = "<group>"; };
 		415BBD0F2162058A009FA99C /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAnalytics.framework; path = Carthage/Build/iOS/FirebaseAnalytics.framework; sourceTree = "<group>"; };
@@ -63,6 +62,7 @@
 		415BBD122162058B009FA99C /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Firebase.framework; path = Carthage/Build/iOS/Firebase.framework; sourceTree = "<group>"; };
 		415BBD132162058B009FA99C /* GoogleAppMeasurement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleAppMeasurement.framework; path = Carthage/Build/iOS/GoogleAppMeasurement.framework; sourceTree = "<group>"; };
 		415BBD142162058B009FA99C /* nanopb.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = nanopb.framework; path = Carthage/Build/iOS/nanopb.framework; sourceTree = "<group>"; };
+		415BBD1D21621AB9009FA99C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		41DB2D5B215A242C003F9E7A /* iOS internship.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS internship.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		41DB2D5E215A242C003F9E7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		41DB2D60215A242C003F9E7A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -142,7 +142,7 @@
 				41DB2D60215A242C003F9E7A /* ViewController.swift */,
 				41DB2D62215A242C003F9E7A /* Main.storyboard */,
 				41DB2D68215A242E003F9E7A /* Assets.xcassets */,
-				415BBC4D215C1121009FA99C /* GoogleService-Info.plist */,
+				415BBD1D21621AB9009FA99C /* GoogleService-Info.plist */,
 				41DB2D6D215A242E003F9E7A /* Info.plist */,
 				41DB2D65215A242C003F9E7A /* iOS_internship.xcdatamodeld */,
 				415BBC38215B59C5009FA99C /* CityModel.swift */,
@@ -296,7 +296,7 @@
 			files = (
 				41DB2D69215A242E003F9E7A /* Assets.xcassets in Resources */,
 				41DB2D64215A242C003F9E7A /* Main.storyboard in Resources */,
-				415BBC4E215C1121009FA99C /* GoogleService-Info.plist in Resources */,
+				415BBD1E21621AB9009FA99C /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
